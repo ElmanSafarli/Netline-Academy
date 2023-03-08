@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netline Academy</title>
+
+    <!-- Styles Css -->
+    <link rel="stylesheet" href="./Style/main.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/webLogo.jpg" />
+</head>
+<body>
+    
+    <section id="header">
+        <div class="navbar">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="./assets/NavLogo.png" alt="">
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="#home">Əsas</a></li>
+                        <li><a href="#about">Haqqımızda</a></li>
+                        <li><a href="#courses">Kurslar</a></li>
+                        <li><a href="#contact">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="nav-btn-group">
+                    <button class="login-btn">Login</button>
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="header-title">
+                        Sizi növbəti səviyyəyə aparacaq öyrənmə platformasını təcrübədən keçirin.
+                    </div>
+                    <div class="header-subtitle">
+                        Real Nəticələr.
+                    </div>
+                    <div class="header-text">
+                        NetLine Azəbaycanda fəaliyyət göstərən İT və xairici dillər üzrə tədris mərkəzidir. 
+                        Texnologiyanın gücünə bizimlə rəhbərlik edin 
+                    </div>
+                    <div class="header-btn-group">
+                        <button class="header-start-btn">Başla</button>
+                        <button class="header-video-btn" onclick="alertedVideo()">
+                            <div class="play-button">
+                                <img src="./assets/play-button.png" alt="play-button">
+                            </div>
+                            <span class="header-play-span">Video Izlə</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-ellips"></div>
+                    <img class="header-teacher" src="./assets/header.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playing Video by clicking Button -->
+    <div id="pvbcb">
+        <video class="clicked-video-btn" autoplay="autoplay" muted controls>
+            <source src="./assets/play-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="close-video" class="close-clicked-vide-btn"></div>
+    </div>
+
+    <!-- Sidebar on Adaptive Version -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-group">
+            <div  id="menu"></div>
+            <div  id="menu"></div>
+            <div  id="menu"></div>
+        </div>
+        
+        <div id="active"  class="action-menu">
+            <ul>
+                <li><a href="#home">Əsas</a></li>
+                <li><a href="#about">Haqqımızda</a></li>
+                <li><a href="#courses">Kurslar</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+            <div class="sidebar-btn-group">
+                <button class="login-btn test">Login</button>
+                <button class="signup-btn test">Sign Up</button>
+            </div>
+            <div class="sidebar-logo">
+                <img class="sidebar-logo-img" src="./assets/webLogo.jpg" alt="">
+            </div>
+            <div class="sidebar-contact">
+                <div class="mail-sidebar">Mail to: <span><a href="mailto:info@netline.az">info@netline.az</a></span></div>
+                <div class="phone-sidebar">Mobile : +944 55 633 07 77</div>
+                <div class="location-sidebar">R.Behbudov. AF Otel Plaza 4-cu mərtəbə, Baku, Azerbaijan</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="about">
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="black-about-rentangle"></div>
+                    <img class="about-img" src="./assets/about.png" alt="">
+                    <div class="border-about-rentangle"></div>
+                </div>
+                <div class="about-right">
+                    <div class="section-about-name">Bizim haqqımızda</div>
+                    <div class="about-title">Biz ən yaxşı rəqəmsal kursları təqdim edirik</div>
+                    <div class="about-text">
+                        Gün keçdikcə rəqəmsallaşan dünyada İnformasiya Texnologiyalarını 
+                        öyrənmək karyeramız üçün ən böyük şansdır! Lakin öyrənməyə necə və 
+                        hardan başlayacağınızı bilmirsiniz NetLine Academy bu mövzuda sizə 
+                        yardımçı olur! Peşəkar təlimçilər, hər detalla zəngin laboratoriya, 
+                        praktika əsaslı metodlarla təhsil alaraq gələcəyin önəmli IT 
+                        mühəndislərindən biri olun !Akademiyada tədris edilən IT 
+                        kurslarımız 10 illik təcrübəyə sahib, peşəkar mütəxəssislər 
+                        tərəfindən tədris edilir.
+                        <br>
+                        <br>
+                        <span class="about-text-span">
+                            Qeyd edək ki, tələbələrimiz Cisco imtahanlarında 
+                            61℅ endirimlə iştirak edirlər.
+                        </span>
+                    </div>
+                    <div class="about-btn">
+                        <button class="about-button">Ətraflı</button>
+                    </div>
+                </div>
+                <div class="about-mobile">
+                    <img class="about-mobile-img" src="./assets/about.png" alt="">
+                    <div class="about-mobile-info">
+                        <img src="./assets/idea.png" alt="">
+                        <span class="about-mobile-info-span">Qeyd edək ki, tələbələrimiz Cisco imtahanlarında 61℅ endirimlə iştirak edirlər.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="courses">
+            <div class="courses-content">
+                <div class="courses-section-name">Kursların Siyahısı</div>
+                <div class="courses-title">Mükəmməl kursunuzu tapın</div>
+                <div class="course-group-box">
+
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Slider On Mobile Version -->
+        <div id="csmb">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Cisco CCNA</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">C# Course</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="course-box">
+                        <img class="course-box-img" src="./assets/course1.png" alt="">
+                        <div class="course-name">Front End</div>
+                        <div class="course-price">140₼</div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>   
+        </div>
+    </section>
+
+
+    <!-- Why We Section -->
+    <section id="whywe">
+        <div class="whywe">
+            <div class="whywe-content">
+                <div class="whywe-top">
+                    <div class="why-top-title">
+                        Niyə Biz?
+                    </div>
+                    <div class="why-top-subtitle">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. 
+                    </div>
+                </div>
+                <div class="whywe-bottom">
+                    <div class="whywe-bottom-first wbf">
+                        <img src="./assets/pricing.png" alt="">
+                        <div class="first-whywe-title  whywe-bottom-title">
+                            Münasib Qiymətlər
+                        </div>
+                        <div class="first-whywe-subtitle whywe-subtitle-bottom">
+                            It is a long established fact that a reader will be distracted by the readable 
+                            content of a page when looking at its layout. The point of using Lorem Ipsum is 
+                            that it has a more-or-less normal distribution of letters, 
+                            as opposed to using 'Content here, content here', making it look 
+                        </div>
+                    </div>
+                    <div class="whywe-bottom-second wbf">
+                        <img src="./assets/experience.png" alt="">
+                        <div class="second-whywe-title whywe-bottom-title">
+                            Yüksək Təcrübə
+                        </div>
+                        <div class="second-whywe-subtitle whywe-subtitle-bottom">
+                            It is a long established fact that a reader will be distracted by the readable 
+                            content of a page when looking at its layout. The point of using Lorem Ipsum is 
+                            that it has a more-or-less normal distribution of letters, 
+                            as opposed to using 'Content here, content here', making it look 
+                        </div>
+                    </div>
+                    <div class="whywe-bottom-third wbf">
+                        <img src="./assets/friendly.png" alt="">
+                        <div class="third-whywe-title whywe-bottom-title">
+                            Şən komanda
+                        </div>
+                        <div class="third-whywe-subtitle whywe-subtitle-bottom">
+                            It is a long established fact that a reader will be distracted by the readable 
+                            content of a page when looking at its layout. The point of using Lorem Ipsum is 
+                            that it has a more-or-less normal distribution of letters, 
+                            as opposed to using 'Content here, content here', making it look 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact">
+            <div class="contact-content">
+                <div class="contact-top">
+                    <div class="contact-section-name">Əlaqə</div>
+                    <div class="contact-title">
+                        Netline Academy
+                        <br>
+                        Bizimlə Əlaqə 
+                    </div>
+                </div>
+                <div class="contact-bottom">
+                    <div class="contact-left">
+                        <div class="contact-location">
+                            <div class="location-icon">
+                                <img src="./assets/location.png" alt="">
+                            </div>
+                            <div>
+                                <div class="cl-title">Bizim ünvanımız</div>
+                                <div class="cl-subtitle">R.Behbudov. AF Otel Plaza 4-cu mərtəbə, Baku, Azerbaijan</div>    
+                            </div>
+                        </div>
+                        <div class="contact-call">
+                            <div class="customer-icon">
+                                <img src="./assets/customer.png" alt="">
+                            </div>
+                            <div>
+                                <div class="cc-title">Əlaqə məlumatları</div>
+                                <div class="cc-subtitle">
+                                    Mobile : +944 55 633 07 77
+                                    <br>
+                                    Mail : <span><a href="mailto:info@netline.az">info@netline.az</a></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <img class="support-img" src="./assets/support.png" alt="">
+                    </div>
+                </div>
+                <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.1651697643933!2d49.83969461535475!3d40.383031779369055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9833c74bdb%3A0x5526393fe022c34f!2sAF%20Hotel%20Baku!5e0!3m2!1sru!2saz!4v1678191949170!5m2!1sru!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img class="footer-logo-img" src="./assets/NavLogo.png" alt="">
+                        Netline Academy
+                    </div>
+                    <div class="footer-left-subtitle">Gələcəyinizi bizimlə qurun</div>
+                    <div class="footer-followus">
+                        Bizi İzləyin
+                        <div class="social-icons-grup">
+                            <div class="footer-social">
+                                <a href="https://instagram.com/netline_academy?igshid=YmMyMTA2M2Y= "><img src="./assets/instagram.png" alt=""></a>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/profile.php?id=100086711838870&mibextid=ZbWKwL">                              
+                                    <img src="./assets/facebook.png" alt="">
+                                </a>
+                            </div>
+                            <div class="footer-social">
+                                <img src="./assets/twitter.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="footer-middle-title">Məlumat</div>
+                    <div class="footer-items">
+                        <ul>
+                            <li><a href="#header">Əsas</a></li>
+                            <li><a href="#courses">Kurslar</a></li>
+                            <li><a href="#contact">Əlaqə</a></li>
+                            <li><a href="#teachers">Müəllimlər</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="mail-form">
+                        <form action="">
+                            <input class="footer-mail-input" type="mail" placeholder="Send Message">
+                            <button class="footer-mail-btn">Mail</button>
+                        </form>
+                    </div>
+                    <div class="footer-contact">
+                        <span>Bizimlə Əlaqə</span>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        info@netline.az
+                        <br>
+                        <br>
+                        R.Behbudov. AF Otel Plaza 4-cu mərtəbə, <br>
+                        Baku, Azerbaijan
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+
+    <!-- Sign Up Desktop -->
+    <!-- <div class="signup-d">
+        <div class="signup-d-content">
+            <div class="left-signup-d">
+                <div class="back-signup-d">
+                    <img src="./assets/back.png" alt="">
+                    Back
+                </div>
+            </div>
+            <div class="right-signup-d">
+                <div class="rsignup-d-title">Get Started</div>
+                <div class="rsignup-d-name">
+                    <form action="">
+                        <input type="text" name="rsignup-d-name" id="rsudname" placeholder="Enter Full Name">
+                    </form>
+                </div>
+                <div class="rsignup-d-mail">
+                    <form action="">
+                        <input type="email" name="rsignup-d-mail" id="rsudmail" placeholder="Enter Mail">
+                    </form>
+                </div>
+                <div class="rsignup-d-password">
+                    <form action="">
+                        <input type="password" name="rsignup-d-password" id="rsudpassword" placeholder="Enter Password">
+                    </form>
+                </div>
+                <div class="checkbox-group-signup">
+                    <form action="">
+                        <input type="checkbox" name="rsignup-check" id="rsudcheck">
+                    </form>
+                    I agree to the procesing of <a href="">Personal Data</a> 
+                </div>
+                <div class="rsignup-d-btn">
+                    <button class="rsignup-d-button">Sign Up</button>
+                </div>
+                <div class="rsignup-d-with">
+                    Sing up with
+                    <div class="rsignup-d-ways">
+                        <img src="./assets/facebook-sign.png" alt="">
+                        <img src="./assets/google-sign.png" alt="">
+                    </div>
+                </div>
+                <div class="rsignup-d-bottom">Already have an account? <span>Sign in</span> </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="./App/App.js"></script>
+</body>
+</html>
