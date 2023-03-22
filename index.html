@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netline Academy</title>
+
+    <!-- Styles Css -->
+    <link rel="stylesheet" href="./Style/main.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/webLogo.jpg" />
+</head>
+<body>
+    
+    <section id="header">
+        <div class="navbar">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="./assets/NavLogo.png" alt="">
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="#header">Əsas</a></li>
+                        <li><a href="#about">Haqqımızda</a></li>
+                        <li><a href="#courses">Kurslar</a></li>
+                        <li><a href="#contact">Əlaqə</a></li>
+                    </ul>
+                    <div class="nav-btn-group">
+                        <button onclick="logInBtn()" class="login-btn">Login</button>
+                        <!-- <button class="signup-btn">Sign Up</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="header-title">
+                        Sizi növbəti səviyyəyə aparacaq öyrənmə platformasını təcrübədən keçirin.
+                    </div>
+                    <div class="header-subtitle">
+                        Real Nəticələr.
+                    </div>
+                    <div class="header-text">
+                        NetLine Azəbaycanda fəaliyyət göstərən İT və xairici dillər üzrə tədris mərkəzidir. 
+                        Texnologiyanın gücünə bizimlə rəhbərlik edin 
+                    </div>
+                    <div class="header-btn-group">
+                        <button class="header-start-btn">Başla</button>
+                        <button class="header-video-btn" onclick="alertedVideo()">
+                            <div class="play-button">
+                                <img src="./assets/play-button.png" alt="play-button">
+                            </div>
+                            <span class="header-play-span">Video Izlə</span>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar on Adaptive Version -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-group">
+            <div  id="menu"></div>
+            <div  id="menu"></div>
+            <div  id="menu"></div>
+        </div>
+        
+        <div id="active"  class="action-menu">
+            <ul>
+                <li><a href="#home">Əsas</a></li>
+                <li><a href="#about">Haqqımızda</a></li>
+                <li><a href="#courses">Kurslar</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+            <div class="sidebar-btn-group">
+                <button onclick="logInBtn()" class="login-btn test">Login</button>
+                <!-- <button class="signup-btn test">Sign Up</button> -->
+            </div>
+            <div class="sidebar-logo">
+                <img class="sidebar-logo-img" src="./assets/webLogo.jpg" alt="">
+            </div>
+            <div class="sidebar-contact">
+                <div class="mail-sidebar">Mail to: <span><a href="mailto:info@netline.az">info@netline.az</a></span></div>
+                <div class="phone-sidebar">Mobile : +944 55 633 07 77</div>
+                <div class="location-sidebar">R.Behbudov. AF Otel Plaza 4-cu mərtəbə, Baku, Azerbaijan</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LogIn -->
+    <div class="signup-login-box">
+        <div id="wrapper">
+            <div class="close-input-icon">
+                <button onclick="closeInputBox()">
+                    <img class="close-input" src="./assets/close.png" alt="close-inpux">
+                </button>
+            </div>
+            <div class="form-box login">
+                <h2  id="testbtn">Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/email.png" alt="input mail icon"></span>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/secured-lock.png" alt="input password img"></span>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                        <a href="">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="input-box-btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="#" onclick="registerLink()" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/user.png" alt="input mail icon"></span>
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/email.png" alt="input mail icon"></span>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/secured-lock.png" alt="input password img"></span>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label for=""><input type="checkbox">I agree to the therms & conditions</label>
+                    </div>
+                    <button type="submit" class="input-box-btn">Registration</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" onclick="loginLink()" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Playing Video by clicking Button -->
+    <div id="pvbcb">
+        <video class="clicked-video-btn" autoplay="autoplay" muted controls>
+            <source src="./assets/Futuristic interface _ HUD sound effects.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="close-video" class="close-clicked-vide-btn"></div>
+    </div>
+
+    
+
+    <section id="about">
+        <div class="about">
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="black-about-rentangle"></div>
+                    <img class="about-img" src="./assets/about.png" alt="">
+                    <div class="border-about-rentangle"></div>
+                </div>
+                <div class="about-right">
+                    <div class="section-about-name">Bizim haqqımızda</div>
+                    <div class="about-title">Biz ən yaxşı rəqəmsal kursları təqdim edirik</div>
+                    <div class="about-text">
+                        Gün keçdikcə rəqəmsallaşan dünyada İnformasiya Texnologiyalarını 
+                        öyrənmək karyeramız üçün ən böyük şansdır! Lakin öyrənməyə necə və 
+                        hardan başlayacağınızı bilmirsiniz NetLine Academy bu mövzuda sizə 
+                        yardımçı olur! Peşəkar təlimçilər, hər detalla zəngin laboratoriya, 
+                        praktika əsaslı metodlarla təhsil alaraq gələcəyin önəmli IT 
+                        mühəndislərindən biri olun !Akademiyada tədris edilən IT 
+                        kurslarımız 10 illik təcrübəyə sahib, peşəkar mütəxəssislər 
+                        tərəfindən tədris edilir.
+                        <br>
+                        <br>
+                        <span class="about-text-span">
+                            Qeyd edək ki, tələbələrimiz Cisco imtahanlarında 
+                            61℅ endirimlə iştirak edirlər.
+                        </span>
+                    </div>
+                    <div class="about-btn">
+                        <button class="about-button">Ətraflı</button>
+                    </div>
+                </div>
+                <div class="about-mobile">
+                    <img class="about-mobile-img" src="./assets/about.png" alt="">
+                    <div class="about-mobile-info">
+                        <img src="./assets/idea.png" alt="">
+                        <span class="about-mobile-info-span">Qeyd edək ki, tələbələrimiz Cisco imtahanlarında 61℅ endirimlə iştirak edirlər.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="courses">
+            <div class="courses-content">
+                <div class="courses-section-name">Kursların Siyahısı</div>
+                <div class="courses-title">Mükəmməl kursunuzu tapın</div>
+                <div class="course-group-box">
+
+                    <div class="course-box" id="csharp-d1">
+                        <img class="course-box-img" src="./assets/1.jpg" alt="">
+                        <div class="course-name">C# - WEB Proqramlaşdırm</div>
+                        <div class="course-price">300₼</div>
+                        <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoCsharpD1()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img-d1" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-csharp-d1" class="catext">
+                            C# - WEB Proqramlaşdırma təlimləri bu sahədə 10 illik iş təcrubəsi olan təlimçi tərəfindən keçiriləcək.
+                            Təlimin əsas hissəsi praktik əsaslı tapşırıqlar ilə tədris ediləcək.
+                            Təlimin müddətində tələbələr xüsusi olaraq REAL layihələrə cəlb ediləcəklər. 
+                            C# - WEB Proqramlaşdırma təlimləri həftədə 2 dəfə minimum 2 saat keçirilir.
+                            Ayliq ödəniş ENDİRİMLƏ  300 AZN-dir və 6 ay davam edir.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box" id="ccna-d2">
+                        <img class="course-box-img" src="./assets/ciscocna.jpg" alt="">
+                        <div class="course-name">Şəbəkə inzibatçısı - Cisco CCNA R&S</div>
+                        <div class="course-price">260₼</div>
+                        <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoCcnaD1()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img-d2" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-ccna-d2" class="catext">
+                            Şəbəkə inzibatçısı - Cisco CCNA R&S həftədə 2 dəfə minimum 2 saat keçirilir.
+                            Ayliq ödəniş 260 AZN-dir və 4 ay davam edir.
+                            Kursumuz Cisco şirkətinin rəsmi əməkdaşı oldugu üçün tələbələrimizə beynəlxalq imtahana giriş üçün tələb olunan məbləğin(300$) net 61.5%-i dəyərində VAUCHER-ENDİRİM verilir.
+                            Və siz beynəlxalq imtahana 300$-əvəzinə 125$ odəniş edəcəksiz. 
+                            Dərslər REAL AVADANLIQLARDA praktiki tədris olunur.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box" id="hdesk-d3">
+                        <img class="course-box-img" src="./assets/ithelpdesk.jpg" alt="">
+                        <div class="course-name">IT HelpDesk (COMP-TİA A+)</div>
+                        <div class="course-price">150₼</div>
+                        <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoHelpD1()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img-d3" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-hdesk-d3" class="catext">
+                            IT HelpDesk (COMP-TİA A+) kursunun aylıq qiyməti 150 azndir. <br>
+                            - Dərslər həftədə 2 dəfə 3 ay müddətində keçirilir. <br>
+                            - Təlim REAL AVADANLIQLARDAN ibarət labaratoriyalarda tədris edilir. <br>
+                            - IT HelpDesk kursları. Kompüterin idarə edilməsi 0-dan öyrədilir, Komputerin yığılması, Windows əməliyyat sistemlərin yazılması(Format),Administrativ idarə edilməsi, Sistemlərdə yaranan problemlərin aradan qaldırılması(diaqnostikas;), Şəbəkə və internet avadanlıqlarının qurulması, ayarlanması, iş prinsipləri nəzəri və PRAKTİK dersləri ilə tədris olunur                            
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box" id="linux-d4">
+                        <img class="course-box-img" src="./assets/linux2.jpg" alt="">
+                        <div class="course-name">Linux RHCSA</div>
+                        <div class="course-price">280₼</div>
+                        <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoLinuxD1()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img-d4" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-linux-d4" class="catext">
+                            Linux RHCSA təlimləri bu sahədə 20 illik iş təcrubəsi olan Anar Sadıqov 
+                            tərəfindən keçiriləcək. Təlimin əsas hissəsi praktik əsaslı tapşırıqlar 
+                            ilə tədris ediləcək. Təlimin sonunda təlbələr 1 aylıq xüsusi İMTAHANA HAZIRLIQ 
+                            üçün “BootCamp”a cəlb olunacaq. Linux RHCSA sistem administratoru təlimləri 
+                            həftədə 2 dəfə minimum 2 saat keçirilir. Ayliq ödəniş ENDİRİMLƏ 280 AZN-dir 
+                            və 3 ay davam edir.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box" id="itadmin-d5">
+                        <img class="course-box-img" src="./assets/itrouteadmin.jpg" alt="">
+                        <div class="course-name">İT Route Admin</div>
+                        <div class="course-price">280₼</div>
+                        <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoItAdminD1()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img-d5" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-itadmin-d5" class="catext">
+                            İT Route Admin təlimi 7 aylıq xüsusi proqramla tədris edilir. Bu təlim xüsusi proqramla hazırlanmışdır və 4 fərqli təlimi özündə birləşdirir.
+                            1 - Cisco CCNAP - ENCOR -300-450 nömrəli təlimi
+                            2 - İT şəbəkə təhlükəsizliyi -Firewall Fortigate - NSE4
+                            3 - İT şəbəkə təhlükəsizliyi -Firewall Palo Alto - PNCSA
+                            4 - Clout texnologiyalarina giriş - Amazon AWS Practicioner
+                            Təlimlər nəzəri, praktiki və imtahan hazırlığı hissələrindən ibarətdir. 
+                            Dərslər həftədə 2 dəfə ortalama 2 saat olaraq keçilir və 7 ay davam edəcək. 
+                            Təlimin qiyməti aylıq 400 azndir. Əlaqə üçün 055-633-0777
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-box" id="fullstack-d6">
+                        <img class="course-box-img" src="./assets/2.jpg" alt="">
+                        <div class="course-name">Full Stack Developer</div>
+                        <div class="course-price">180₼</div>
+                        <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoFullStackD1()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img-d6" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-fullstack-d6" class="catext">
+                            İT Route Admin təlimi 7 aylıq xüsusi proqramla tədris edilir. Bu təlim xüsusi proqramla hazırlanmışdır və 4 fərqli təlimi özündə birləşdirir.
+                            1 - Cisco CCNAP - ENCOR -300-450 nömrəli təlimi
+                            2 - İT şəbəkə təhlükəsizliyi -Firewall Fortigate - NSE4
+                            3 - İT şəbəkə təhlükəsizliyi -Firewall Palo Alto - PNCSA
+                            4 - Clout texnologiyalarina giriş - Amazon AWS Practicioner
+                            Təlimlər nəzəri, praktiki və imtahan hazırlığı hissələrindən ibarətdir. 
+                            Dərslər həftədə 2 dəfə ortalama 2 saat olaraq keçilir və 7 ay davam edəcək. 
+                            Təlimin qiyməti aylıq 400 azndir. Əlaqə üçün 055-633-0777
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses Slider On Mobile Version -->
+        <div id="csmb">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="course-box" id="csharp">
+                        <img class="course-box-img" src="./assets/1.jpg" alt="">
+                        <div class="course-name">C# - WEB Proqramlaşdırma</div>
+                        <div class="course-price">300₼</div>
+                        <button class="more-info-course-btn" id="micb" onclick="coursInfoCsharp()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-csharp">
+                            C# - WEB Proqramlaşdırma təlimləri bu sahədə 10 illik iş təcrubəsi olan təlimçi tərəfindən keçiriləcək.
+                            Təlimin əsas hissəsi praktik əsaslı tapşırıqlar ilə tədris ediləcək.
+                            Təlimin müddətində tələbələr xüsusi olaraq REAL layihələrə cəlb ediləcəklər. 
+                            C# - WEB Proqramlaşdırma təlimləri həftədə 2 dəfə minimum 2 saat keçirilir.
+                            Ayliq ödəniş ENDİRİMLƏ  300 AZN-dir və 6 ay davam edir.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="course-box"  id="ccna">
+                        <img class="course-box-img" src="./assets/ciscocna.jpg" alt="">
+                        <div class="course-name">Şəbəkə inzibatçısı - Cisco CCNA R&S</div>
+                        <div class="course-price">260₼</div>
+                        <button class="more-info-course-btn" id="micb" onclick="coursInfoCcna()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img2" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-ccna">
+                            Şəbəkə inzibatçısı - Cisco CCNA R&S həftədə 2 dəfə minimum 2 saat keçirilir.
+                            Ayliq ödəniş 260 AZN-dir və 4 ay davam edir.
+                            Kursumuz Cisco şirkətinin rəsmi əməkdaşı oldugu üçün tələbələrimizə beynəlxalq imtahana giriş üçün tələb olunan məbləğin(300$) net 61.5%-i dəyərində VAUCHER-ENDİRİM verilir.
+                            Və siz beynəlxalq imtahana 300$-əvəzinə 125$ odəniş edəcəksiz. 
+                            Dərslər REAL AVADANLIQLARDA praktiki tədris olunur.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="course-box" id="helpdesk">
+                        <img class="course-box-img" src="./assets/ithelpdesk.jpg" alt="">
+                        <div class="course-name">IT HelpDesk (COMP-TİA A+)</div>
+                        <div class="course-price">150₼</div>
+                        <button class="more-info-course-btn" id="micb" onclick="coursInfoHelpDesk()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img3" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-helpdesk">
+                            IT HelpDesk (COMP-TİA A+) kursunun aylıq qiyməti 150 azndir. <br>
+                            - Dərslər həftədə 2 dəfə 3 ay müddətində keçirilir. <br>
+                            - Təlim REAL AVADANLIQLARDAN ibarət labaratoriyalarda tədris edilir. <br>
+                            - IT HelpDesk kursları. Kompüterin idarə edilməsi 0-dan öyrədilir, Komputerin yığılması, Windows əməliyyat sistemlərin yazılması(Format),Administrativ idarə edilməsi, Sistemlərdə yaranan problemlərin aradan qaldırılması(diaqnostikas;), Şəbəkə və internet avadanlıqlarının qurulması, ayarlanması, iş prinsipləri nəzəri və PRAKTİK dersləri ilə tədris olunur                            
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="course-box" id="linuxrhcsa">
+                        <img class="course-box-img" src="./assets/linux.jpg" alt="">
+                        <div class="course-name">Linux RHCSA</div>
+                        <div class="course-price">280₼</div>
+                        <button class="more-info-course-btn" id="micb" onclick="coursInfoLinuxRhcsa()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img4" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-linuxrhcsa">
+                            Linux RHCSA  təlimləri bu sahədə 20 illik iş təcrubəsi olan Anar Sadıqov tərəfindən keçiriləcək.
+                            Təlimin əsas hissəsi praktik əsaslı tapşırıqlar ilə tədris ediləcək.
+                            Təlimin sonunda təlbələr 1 aylıq xüsusi İMTAHANA HAZIRLIQ üçün “BootCamp”a cəlb olunacaq.
+                            Linux RHCSA sistem administratoru təlimləri həftədə 2 dəfə minimum 2 saat keçirilir.
+                            Ayliq ödəniş ENDİRİMLƏ  280 AZN-dir və 3 ay davam edir.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="course-box" id="itadmin">
+                        <img class="course-box-img" src="./assets/itrouteadmin.jpg" alt="">
+                        <div class="course-name">İT Route Admin</div>
+                        <div class="course-price">280₼</div>
+                        <button class="more-info-course-btn" id="micb" onclick="coursInfoItAdmin()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img5" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-itadmin">
+                            İT Route Admin təlimi 7 aylıq xüsusi proqramla tədris edilir. Bu təlim xüsusi proqramla hazırlanmışdır və 4 fərqli təlimi özündə birləşdirir. <br>
+                            1 - Cisco CCNAP - ENCOR -300-450 nömrəli təlimi <br>
+                            2 - İT şəbəkə təhlükəsizliyi -Firewall Fortigate - NSE4 <br>
+                            3 - İT şəbəkə təhlükəsizliyi -Firewall Palo Alto - PNCSA <br>
+                            4 - Clout texnologiyalarina giriş - Amazon AWS Practicioner <br>
+                            Təlimlər nəzəri, praktiki və imtahan hazırlığı hissələrindən ibarətdir.
+                            Dərslər həftədə 2 dəfə ortalama 2 saat olaraq keçilir və 7 ay davam edəcək.
+                            Təlimin qiyməti aylıq 400 azndir.
+                            Əlaqə üçün 055-633-0777
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <button class="course-button">Dərsə yazıl</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>   
+        </div>
+    </section>
+
+
+    <!-- Why We Section -->
+    <section id="whywe">
+        <div class="whywe">
+            <div class="whywe-content">
+                <div class="whywe-top">
+                    <div class="why-top-title">
+                        Niyə Biz?
+                    </div>
+                    <div class="why-top-subtitle">
+                        Tələbələrimiz üçün çoxlu əlverişli şəraitimiz var. 
+                    </div>
+                </div>
+                <div class="whywe-bottom">
+                    <div class="whywe-bottom-first wbf">
+                        <img src="./assets/pricing.png" alt="">
+                        <div class="first-whywe-title  whywe-bottom-title">
+                            Münasib Qiymətlər
+                        </div>
+                        <div class="first-whywe-subtitle whywe-subtitle-bottom">
+                            Kurslarımızın qiymətləri Bakıdakı digər kurslarla 
+                            müqayisədə ən aşağı qiymətdir. Biz sizə aşağı qiymətlərlə 
+                            yüksək səviyyədə bilik təklif edirik. Beləliklə, 
+                            kurslarımıza yazılmaqla siz bu sahədə böyük təcrübəyə malik 
+                            peşəkarlardan dərs alacaqsınız. Siz həmçinin kursu bitirdikdən 
+                            sonra sertifikat alacaqsınız. 
+                        </div>
+                    </div>
+                    <div class="whywe-bottom-second wbf">
+                        <img src="./assets/experience.png" alt="">
+                        <div class="second-whywe-title whywe-bottom-title">
+                            Yüksək Təcrübə
+                        </div>
+                        <div class="second-whywe-subtitle whywe-subtitle-bottom">
+                            Müəllimlərimiz təcrübəyə xüsusi önəm verdikləri üçün tələbə həm yüksək 
+                            nəticə əldə edir, həm də biliyə və ən əsası təcrübəyə yiyələnir! 
+                            Axı bizdə praktiki tapşırıqlar üçün bütün lazımi avadanlıqlar var. 
+                        </div>
+                    </div>
+                    <div class="whywe-bottom-third wbf">
+                        <img src="./assets/friendly.png" alt="">
+                        <div class="third-whywe-title whywe-bottom-title">
+                            Şən komanda
+                        </div>
+                        <div class="third-whywe-subtitle whywe-subtitle-bottom">
+                            Kurslarımızı keçən tələbə təkcə bilik deyil, həm də xoş xatirələr qazanır. 
+                            Müəllimlərimiz tələbələri ilə həmişə səmimi və mehribandırlar. 
+                            Onlar çalışırlar ki, şagird yükdən deyil, dərsdən həzz alsın. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallerySliderSection"> 
+        <div class="gallery-slideshow-container">
+            <div class="gallerySlides fade slide1">
+                <!-- <img src="./assets/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" style="width:100%"> -->
+            </div>
+
+            <div class="gallerySlides fade slide2">
+                <!-- <img src="./assets/luca-bravo-XJXWbfSo2f0-unsplash.jpg" style="width:100%"> -->
+            </div>
+
+            <div class="gallerySlides fade slide3">
+                <!-- <img src="./assets/ilya-pavlov-OqtafYT5kTw-unsplash.jpg" style="width:100%"> -->
+            </div>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact">
+            <div class="contact-content">
+                <div class="contact-top">
+                    <div class="contact-section-name">Əlaqə</div>
+                    <div class="contact-title">
+                        Netline Academy
+                        <br>
+                        Bizimlə Əlaqə 
+                    </div>
+                </div>
+                <div class="contact-bottom">
+                    <div class="contact-left">
+                        <div class="contact-location">
+                            <div class="location-icon">
+                                <img src="./assets/location.png" alt="">
+                            </div>
+                            <div>
+                                <div class="cl-title">Bizim ünvanımız</div>
+                                <div class="cl-subtitle">R.Behbudov. AF Otel Plaza 4-cu mərtəbə, Baku, Azerbaijan</div>    
+                            </div>
+                        </div>
+                        <div class="contact-call">
+                            <div class="customer-icon">
+                                <img src="./assets/customer.png" alt="">
+                            </div>
+                            <div>
+                                <div class="cc-title">Əlaqə məlumatları</div>
+                                <div class="cc-subtitle">
+                                    Mobile : +944 55 633 07 77
+                                    <br>
+                                    Mail : <span><a href="mailto:info@netline.az">info@netline.az</a></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <img class="support-img" src="./assets/support.png" alt="">
+                    </div>
+                </div>
+                <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.1651697643933!2d49.83969461535475!3d40.383031779369055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9833c74bdb%3A0x5526393fe022c34f!2sAF%20Hotel%20Baku!5e0!3m2!1sru!2saz!4v1678191949170!5m2!1sru!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img class="footer-logo-img" src="./assets/NavLogo.png" alt="">
+                        Netline Academy
+                    </div>
+                    <div class="footer-left-subtitle">Gələcəyinizi bizimlə qurun</div>
+                    <div class="footer-followus">
+                        Bizi İzləyin
+                        <div class="social-icons-grup">
+                            <div class="footer-social">
+                                <a href="https://instagram.com/netline_academy?igshid=YmMyMTA2M2Y= "><img src="./assets/instagram.png" alt=""></a>
+                            </div>
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/profile.php?id=100086711838870&mibextid=ZbWKwL">                              
+                                    <img src="./assets/facebook.png" alt="">
+                                </a>
+                            </div>
+                            <div class="footer-social">
+                                <img src="./assets/twitter.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="footer-middle-title">Məlumat</div>
+                    <div class="footer-items">
+                        <ul>
+                            <li><a href="#header">Əsas</a></li>
+                            <li><a href="#courses">Kurslar</a></li>
+                            <li><a href="#contact">Əlaqə</a></li>
+                            <li><a href="#teachers">Müəllimlər</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="mail-form">
+                        <form action="">
+                            <input class="footer-mail-input" type="mail" placeholder="Send Message">
+                            <button class="footer-mail-btn">Mail</button>
+                        </form>
+                    </div>
+                    <div class="footer-contact">
+                        <span>Bizimlə Əlaqə</span>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        info@netline.az
+                        <br>
+                        <br>
+                        R.Behbudov. AF Otel Plaza 4-cu mərtəbə, <br>
+                        Baku, Azerbaijan
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+
+    <!-- Sign Up Desktop -->
+    <!-- <div class="signup-d">
+        <div class="signup-d-content">
+            <div class="left-signup-d">
+                <div class="back-signup-d">
+                    <img src="./assets/back.png" alt="">
+                    Back
+                </div>
+            </div>
+            <div class="right-signup-d">
+                <div class="rsignup-d-title">Get Started</div>
+                <div class="rsignup-d-name">
+                    <form action="">
+                        <input type="text" name="rsignup-d-name" id="rsudname" placeholder="Enter Full Name">
+                    </form>
+                </div>
+                <div class="rsignup-d-mail">
+                    <form action="">
+                        <input type="email" name="rsignup-d-mail" id="rsudmail" placeholder="Enter Mail">
+                    </form>
+                </div>
+                <div class="rsignup-d-password">
+                    <form action="">
+                        <input type="password" name="rsignup-d-password" id="rsudpassword" placeholder="Enter Password">
+                    </form>
+                </div>
+                <div class="checkbox-group-signup">
+                    <form action="">
+                        <input type="checkbox" name="rsignup-check" id="rsudcheck">
+                    </form>
+                    I agree to the procesing of <a href="">Personal Data</a> 
+                </div>
+                <div class="rsignup-d-btn">
+                    <button class="rsignup-d-button">Sign Up</button>
+                </div>
+                <div class="rsignup-d-with">
+                    Sing up with
+                    <div class="rsignup-d-ways">
+                        <img src="./assets/facebook-sign.png" alt="">
+                        <img src="./assets/google-sign.png" alt="">
+                    </div>
+                </div>
+                <div class="rsignup-d-bottom">Already have an account? <span>Sign in</span> </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="./App/App.js"></script>
+</body>
+</html>
