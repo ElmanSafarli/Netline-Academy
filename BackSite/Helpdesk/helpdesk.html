@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk Nədir</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/webLogo.jpg" />
+    <link rel="stylesheet" href="./Style/main.css">
+    <link rel="stylesheet" href="./Style/helpdesk.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="./assets/NavLogo.png" alt="">
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="http://localhost:3001/">Əsas</a></li>
+                    <li><a href="http://localhost:3001/">Haqqımızda</a></li>
+                    <li><a href="http://localhost:3001/">Kurslar</a></li>
+                    <li><a href="http://localhost:3001/teachers">Təlimçilər</a></li>
+                    <li><a href="http://localhost:3001/">Əlaqə</a></li>
+                </ul>
+                <div class="nav-btn-group">
+                    <button onclick="logInBtn()" class="login-btn">Login</button>
+                    <!-- <button class="signup-btn">Sign Up</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar on Adaptive Version -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-group">
+            <div  id="menu"></div>
+            <div  id="menu"></div>
+            <div  id="menu"></div>
+        </div>
+        
+        <div id="active"  class="action-menu">
+            <ul>
+                <li><a href="http://localhost:3001/">Əsas</a></li>
+                <li><a href="http://localhost:3001/">Haqqımızda</a></li>
+                <li><a href="http://localhost:3001/">Kurslar</a></li>
+                <li><a href="http://localhost:3001/teachers">Təlimçilər</a></li>
+                <li><a href="http://localhost:3001/">Əlaqə</a></li>
+            </ul>
+            <div class="sidebar-btn-group">
+                <button onclick="logInBtn()" class="login-btn test">Login</button>
+                <!-- <button class="signup-btn test">Sign Up</button> -->
+            </div>
+            <div class="sidebar-logo">
+                <img class="sidebar-logo-img" src="./assets/webLogo.jpg" alt="">
+            </div>
+            <div class="sidebar-contact">
+                <div class="mail-sidebar">Mail to: <span><a href="mailto:info@netline.az">info@netline.az</a></span></div>
+                <div class="phone-sidebar">Mobile : +944 55 633 07 77</div>
+                <div class="location-sidebar">R.Behbudov. AF Otel Plaza 4-cu mərtəbə, Baku, Azerbaijan</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LogIn -->
+    <div class="signup-login-box">
+        <div id="wrapper">
+            <div class="close-input-icon">
+                <button onclick="closeInputBox()">
+                    <img class="close-input" src="./assets/close.png" alt="close-inpux">
+                </button>
+            </div>
+            <div class="form-box login">
+                <h2  id="testbtn">Login</h2>
+                <form action="/" method="POST">
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/email.png" alt="input mail icon"></span>
+                        <input name="emailLogin" type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/secured-lock.png" alt="input password img"></span>
+                        <input name="passLogin" type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                        <a href="">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="input-box-btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="#" onclick="registerLink()" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="/" method="POST">
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/user.png" alt="input mail icon"></span>
+                        <input name="usernameRegister" type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/email.png" alt="input mail icon"></span>
+                        <input name="emailRegister" type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon-ib"><img src="./assets/secured-lock.png" alt="input password img"></span>
+                        <input name="passwordRegister" type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label for=""><input type="checkbox">I agree to the therms & conditions</label>
+                    </div>
+                    <button type="submit" class="input-box-btn">Registration</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" onclick="loginLink()" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section id="reedInfo">
+        <div class="reed-info">
+            <ul class="ricoursechoose">
+                <li data-slider="slider_cweb"><a href="#">WEB Proqramlaşdırma</a></li>
+                <li data-slider="slider_ccna"><a href="#">Şəbəkə inzibatçısı</a></li>
+                <li data-slider="slider_helpdesk"><a href="#" id="activeReedinfocourse" class="aricclass">IT HelpDesk</a></li>
+                <li data-slider="slider_rhcsa"><a href="#">Linux RHCSA</a></li>
+                <li data-slider="slider_itrootadmin"><a href="#">Network Security</a></li>
+                <!-- <li data-slider="slider_fullstack"><a href="#">Full Stack Developer</a></li>  -->
+              </ul>
+        </div>
+    </section>
+    
+    <section id="reedInfoChooseHelpdesk" class="slider-reed-info slider_helpdesk activeric">
+        <div class="left-helpdesk">
+            <h2>Help Desk Nədir?</h2>
+            <p>Help Desk bir xidmət və ya məhsul üzrə müştəriyə göstərilən texniki dəstəkdir. Help Desk, 3 hissəyə bölünür. Bunlar, “IT Support Helpdesk”, “Customer Service Helpdesk” və “Business Helpdesk” kimi, sıralanır. Böyük şirkətlərdə IT departamentlər çox şaxəli və doğru strukturlarla təsis edildiyi üçün, Help Desk komandası da öz daxilində, “HelpDesk Agent”, “Helpdesk Team Lead”, “Helpdesk Manager” olaraq, 3 hissəyə ayrılır. Biz bu yazımızda, “IT Support Helpdesk” haqqında danışacağıq.</p>
+            
+            <h2>İT Support Helpdesk Nədir?</h2>
+            <p>İT Support Helpdesk qısaca desək, bir müəssə daxilində yaranmış texniki problemləri həll edən şöbədir.Şirkət daxilindəki kompyuterlərin, skannerlərin, printerlərin və ümumiyyətlə bütün texnoloji cihazların yaşadığı texniki problemləri, Helpdesk komandasının həll etməsi gözlənilir. Əgər bu texniki problemləri həll etmək mümkün deyilsə, bu cihazların təmiri üçün kənardan bir dəstək alınmağını və ya yeni cihazların sifariş edilməsini, Helpdesk komandası əlaqəli departamentə bildirir.</p>
+            
+            <h2>Helpdesk Mütəxəssisi Hansı İşləri Görür?</h2>
+            <p>Helpdesk komandası, cihazlarda yaranmış problemləri aradan qaldırmaqla bərabər, kompyuterlərdə əməliyyat sistemlərində yaranmış problemləri həll etməli, yeni əməliyyat sistemlərini yazmalı, kompyuterləri tələb olunan proqram təminatları ilə təmin etməli və sistem backup’larını almalıdır.</p>
+            
+            <h2>Helpdesk Mütəxəssisi Hansı Şəxsi Keyfiyyətlərə Sahib Olmalıdır?</h2>
+            <p>Helpdesk mütəxəssisinin əsas şəxsi keyfiyyətləri; analitik düşünmə qabiliyyəti, problem həll etmə bacarığı və səbrli olmaqdır. Bir şirkətdə helpdesk mütəxəssisi işlədiyiniz zaman, bir çox gözləmədiyiniz problemlə qarşılaşacaqsınız. Ən böyük vəzifəniz, bu problemləri ən qısa müddətdə həll etməkdir. Problem həll etmə bacarığı, bütün İT mütəxəssislərin işlərində uğurlu olması üçün sahib olmaqları mütləq olan, ən vacib şəxsi keyfiyyətdir. Bir müəssə daxilində işçilərin əksəriyyətiinin, orta səviyyəli kompyuter istifadəçisi olduğunu unutmayın. Bu səbəbdən, sizi yoran bir çox xırda problemlə üzləşəcəksiniz. Kompyuteri enerji mənbəyinə qoşmadan, “yanmadığını” iddia edənlərdən, işlətdiyi mouse’un batareyasının bitmiş olma ehtimalını ağlına gətirməyən, bir çox iş yoldaşınız olacaq. Eyni zamanda, gündə bir neçə dəfə kəsilən internet bağlantısı ilə əlaqədar çağırıla bilərsiniz. Bu səbəbdən, Helpdesk mütəxəssisinin digər əhəmiyyətli şəxsi keyfiyyəti, səbrli olmaqdır. Bütün bunların, bu peşənin reallıqları olduğunu qəbul etməlisiniz.</p>
+            
+            <h2>Helpdesk Mütəxəssisi Olmaq üçün Nə Etmək Lazımdır?</h2>
+            <p>Əgər siz İnformasiya Texnologiyaları və bu ixtisasla əlaqəli sahələrdə təhsil alırsınızsa, bu sahə üzrə işləmək sizin üçün çox daha asandır. Əgər sahə üzrə hər hansı bir təhsiliniz yoxdursa, bu sahənin internet vasitəsi ilə öyrənmək üçün bir çox pullu və pulsuz qaynaq var. Youtube kimi pulsuz, Udemy kimi pullu vizual dərsliklər tapa biləcəyiniz, bir çox qiymətli qaynaq var. Eyni zamanda, bloglar və forumlar da köməyinizə çatacaq. Sahə üzrə iş tapma mərhələsində aldığınız sertifikatlar, sizi rəqiblərinizdən bir addım önə çıxardacaq. Bu sahənin ən qiymətli sertifikatlarından biri, CompTIA A+ sertifikatıdır. Eyni zamanda, “Google İT Support” və “Microsoft IT Support” sertifikatları da, bu sahəyə əmin addımlarla başlamaq üçün çox əhəmiyyətlidir</p>
+            
+            <h2>Helpdesk Mütəxəssisi Olmaq İstəyənlərə Təklifimiz Var!</h2>
+            <p>Bir şirkətdə kiçik mütəxəssis kimi işləməyə başladığınızda, üzləşdiyiniz problemləri həll edərək biliyinizi təcrübə ilə çox daha artıracaqsınız. Əgər siz iş mühitinə başlamadan əvvəl lazımi praktiki biliklərə yiyələnmək istəyirsinizsə, CELT IT College’in təsis etdiyi IT Helpdesk kursları rəqabətə davamlı IT Help desk mütəxəssi kimi yetişməyiniz üçün, ən böyük dəstəkçiniz olacaq.</p>    
+
+            <div id="comment">
+                <h1>Mesaj yaz</h1>
+                <form action="">
+                    <div class="comment">
+                        <div class="comment-top">
+                            <input type="text" name="comentNameUser" id="comentNameUser" placeholder="Ad" required>
+                            <input type="email" name="comentEmailUser" id="comentEmailUser" placeholder="Email Ünvan" required>
+                        </div>
+                        <div class="comment-bottom">
+                            <textarea name="message" cols="30" rows="4" placeholder="Mesajınızı qeyd edin" id="comentMessageText"></textarea>
+                        </div>
+                        <button type="submit">Mesajı göndər</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-helpdesk">
+            <img src="./assets/ithelpdesk.jpg" alt="">
+            <img src="./assets/1.jpg" alt="">
+            <img src="./assets/2.jpg" alt="">
+            <img src="./assets/ithelpdesk (2).jpg" alt="">
+        </div>
+    </section>
+
+    <section id="reedInfoChooseItroutadmin" class="slider-reed-info slider_itrootadmin">
+        <div class="left-itroutadmin">
+            <h2>Komputer Şəbəkələri Nədir?</h2>
+            <p>Komputer şəbəkələri 2 və daha çox komputerin və ya cihazın, bir-birinə bağlanaraq aralarında xəbərləşməsinə, məlumat ötürməsinə, məlumat almasına imkan yaradan sistemdir. Komputer şəbəkələri lokal şəbəkələrdə kabellərlə(LAN) ola biləcəyi kimi, kabelsiz(WLAN) bağlantıları ilə də mümkündür. Eyni zamanda, qlobal və tamamilə rəqəmsallaşmış dünyada, “MAN” və “WAN” kimi geniş sahə bağlantılarını yaradan texnologiyalar da çox geniş istifadə olunur. <br> <br> Əslində ən böyük şəbəkə, muasir dünyamızın ayrılmaz parçası olan İnternetdir. İnternet, bütün internet səhifələrinin eyni şəbəkədə olduğu, çox nəhəng bir şəbəkədir. İP protokolları vasitəsi ilə, bir-birinə bağlanan və bu şəbəkə daxilindəki bütün cihaz və texnologiyaların bir-birinə məlumat ötürə bildiyi, çox böyük bir sistemdir.</p>
+            
+            <h2>Şəbəkə Administratorluğu Nədir?</h2>
+            <p>Şəbəkə administratorluğu bu günün korporativ dünyasında, IT departamentinin çox əhəmiyyətli bir hissəsidir. Müəssə daxili texniki avadanlıqların və bu avadanlıqların proqram təminatının tənzimlənməsi, quraşdırılmış şəbəkə və sistemlərindəki nazasızlıqların aradan qaldırılmasını təmin edir. Şəbəkə administratoru şəbəkə cihazlarının tənzimləmələrini yerinə yetirməklə bərabər, şəkəkədəki təhlükəsizlik sistemlərinə də nəzarət edir.</p>
+            
+            <h2>Şəbəkə Administratorluğu üçün Rəsmi Sertifikatlar</h2>
+            <p>Şəbəkə administratorluğu üçün əksər sertifikatlar, şəbəkə sistemlərində istifadə olunan texnologiyalar üzrə tərtib olunur. Həm dünyada, həm də Azərbaycanda, “CİSCO” şirkətinin istehsal etdiyi texnologiyalar üzrə təsis olunan ‘CİSCO”, “CBROPS”, “DEVASC” və “ENCOR” imtahanlarını nümunə göstərmək olar. <br> <br> ‘CİSCO” sertifikatlarından əvvəl, fundamental şəbəkə biliklərinizdən əmin olmağınız üçün, “CompTİA Network+” sertifikatını almaq, sizin üçün daha faydalı ola bilər. Eyni zamanda, virtuallaşdırma ilə maraqlanırsınızsa, “VCTA-NV” sertifikatını almağınız “VMWare NSX” şəbəkə virtuallaşdırma platformasına daxil olmaq üçün yaxşı seçimdir.</p>
+            
+            <h2>Necə Şəbəkə Administratoru Ola Bilərəm?</h2>
+            <p>Şəbəkə administratoru olmaq istəyirsinizsə, sahə üzrə akademik təhsilinizin olması, gələcək karyeranız üçün çox əhəmiyyətlidir. Bu sahə üzrə Kompüter mühəndisliyi, İnformasiya Texnologiyaları və ya əlaqəli ixtisasları oxumaq, karyeranızda əmin addımlarla ilərləməyinizi asanlaşdıracaq. Təhsil aldığınız və ya bu sahəyə keçid etmək üçün hazırlaşdığınız müddətdə, rəsmi sertifikatları almağınız, iş tapmağınızı çox daha mümkün edəcək. Eyni zamanda, əgər bir-başa şəbəkə administratoru kimi iş tapa bilmirsinizsə, “Helpdesk” sahəsində işləməyə başlayıb, biliklərinizi artıraraq şəbəkə administratorluğuna keçid edə bilərsiniz. Helpdesk sahəsi üzrə isə, CompTİA A+ və Google İT Support sertifikatları sizin üçün çox faydalı olacaq.</p>
+            
+            <div id="comment">
+                <h1>Mesaj yaz</h1>
+                <form action="">
+                    <div class="comment">
+                        <div class="comment-top">
+                            <input type="text" name="comentNameUser" id="comentNameUser" placeholder="Ad" required>
+                            <input type="email" name="comentEmailUser" id="comentEmailUser" placeholder="Email Ünvan" required>
+                        </div>
+                        <div class="comment-bottom">
+                            <textarea name="message" cols="30" rows="4" placeholder="Mesajınızı qeyd edin" id="comentMessageText"></textarea>
+                        </div>
+                        <button type="submit">Mesajı göndər</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-itroutadmin">
+            <img src="./assets/itrouteadmin.jpg" alt="">
+            <img src="./assets/linux2.jpg" alt="">
+            <img src="./assets/itrootadmin2.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="reedInfoChooseCsharp" class="slider-reed-info slider_cweb">
+        <div class="left-csharp">
+            <h2>Web proqramlaşdırma nədir?</h2>
+            <p>Web proqramlaşdırma qısa desək, bir internet səhifəsində istifadəçinin gördüyü və görmədiyi, hər şey kimi deyə bilərik. Web proqramlaşdırma, Front-End və Back-End olmaqla, 2 hissəyə ayrılır. İstifadəçinin gördükləri Front-End, görmədikləri isə, Back-End proqramlaşdırmanın məhsuludur.</p>
+            
+            <h2>Front-End proqramlaşdırma nədir?</h2>
+            <p>Front-End saytda istifadəçinin gördüyü vizual tərəfdir. Muasir web dünyasında, hər gün daha da əhəmiyyəti artır. Buna səbəb, Google kimi texnologiya nəhənginin istifadəçi üçün, ən rahat və ən funksional şəkildə dizayn edilmiş saytları, öz axtarış nəticələri səhifələrində ön sıralara çıxartmasıdır.</p>
+            
+            <h2>Front-End proqramlaşdırma dilləri hansılardır?</h2>
+            <p>Front-End dekikdə HTML, CSS və JavaScript kimi, texnologiyalar nəzərdə tutulur. Proqramlaşdırma dünyasında HTML və CSS bir çoxları tərəfindən proqramlaşdırma dili kimi sayılmasa da, istifadəçi təcrübəsinin bu qədər əhəmiyyətli olduğu dövrdə, web proqramlaşdırma dünyasındakı yerlərini qorumaqdadırlar. <br> <br> HTML(Hypertext Markup Language), bir saytın strukturunu müəyyənləşdirən, işarələmə dilidir. CSS(Cascading Style Sheets) ilə, saytın görünüşü dizayn edilir. JavaScript ilə isə, saytın istifadəçi interfeysindəki funksionallığı reallaşdırılır. Eyni zamanda Front-End tərəfində, CSS üçün Twitter tərəfindən yaradılmış, Bootstrap framework’ü və Javascript ailəsinə daxil olan Ajax, JQuery, Angular JS kimi texnologiyalar da istifadə olunur</p>
+            
+            <h2>Back-End proqramlaşdırma nədir?</h2>
+            <p>Back-End proqramlaşdırma daha asan bir formada desək, istifadəçinin görmədiyi daha mürəkkəb prosseslərin reallaşması üçün yaradılan, arxa plan strukturudur. Bir saytın server side’a aid, əlaqəli bütün prosesləri, eyni zamanda istifadəçinin daxil etdiyi məlumatın işlənməsini, Back-End tərərfi reallaşdırır. Back-end proqramlaşdırmada PHP, ASP.NET, JAVA, PHYTON, C# və.s. kimi proqramlaşdırma dilləri istifadə olunur</p>
+        
+            <h2>Server tərəfi(Server Side) nədir?</h2>
+            <p>Back-End proqramlaşdırmada, sayta daxil olan məlumatlar database’a göndərilir. Bu səbəbdən, Back-End dedikdə eyni zamanda MYSQL, MSSQL və Oracle kimi database dilləri ilə iş də, nəzərdə tututlur.</p>
+            <div id="comment">
+                <h1>Mesaj yaz</h1>
+                <form action="">
+                    <div class="comment">
+                        <div class="comment-top">
+                            <input type="text" name="comentNameUser" id="comentNameUser" placeholder="Ad" required>
+                            <input type="email" name="comentEmailUser" id="comentEmailUser" placeholder="Email Ünvan" required>
+                        </div>
+                        <div class="comment-bottom">
+                            <textarea name="message" cols="30" rows="4" placeholder="Mesajınızı qeyd edin" id="comentMessageText"></textarea>
+                        </div>
+                        <button type="submit">Mesajı göndər</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-csharp">
+            <img src="./assets/csharp1.jpg" alt="">
+            <img src="./assets/csharp2.jpg" alt="">
+            <img src="./assets/csharp3.png" alt="">
+            <img src="./assets/csharp4.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="reedInfoChooseCcna" class="slider-reed-info slider_ccna">
+        <div class="left-ccna">
+            <h2>CCNA nədir?</h2>
+            <p>CCNA (Cisco Certified Network Associate) Marşrutlaşdırma və Kommutasiya Cisco sertifikatlaşdırma sistemində ən geniş yayılmış sertifikatdır, müasir şəbəkə avadanlığı ilə ciddi iş üçün faktiki olaraq demək olar ki, məcburidir. Buna sahib olmaq mütəxəssisin orta və kiçik ölçülü şəbəkələri quraşdırmaq, konfiqurasiya etmək və onlarla işləmək, habelə onlarda yaranan problemləri müəyyən etmək və aradan qaldırmaq üçün lazımi bilik və bacarıqlara malik olması deməkdir.</p>
+            
+            <h2>CCNA (Cisco Certified Network Associate) Sertifikatı</h2>
+            <p>Sertifikat əldə etmək üçün əvvəlcə hər hansı digər statuslar əldə etmək lazım deyil və onun özü sonrakı sertifikatlaşdırma üçün əsasdır. Status ya iki imtahanın (100-105 və 200-105) nəticələrinə, ya da 200-125 vahid birləşmiş imtahanın nəticələrinə əsasən təyin edilir. Seçim namizəddən asılıdır. <br><br> Qeyd etmək lazımdır ki, 100-105 imtahanını uğurla verdikdən sonra namizədə "aşağı" status - CCENT (Cisco Certified Entry Network Technician) verilir. <br><br> Sertifikat üç il müddətində etibarlıdır, yenilənmə üçün hər üç ildən bir eyni səviyyədə və ya daha yüksək səviyyədə yenidən qeydiyyatdan keçmək və yenidən sertifikatlaşdırma tələb olunur.</p>
+            
+            <h2>Sertifikat nə verir?</h2>
+            <p>Sertifikat almağın üstünlükləri</p>
+            <ul>
+                <li>Şəbəkə Akademiyası Sertifikatı İnternet texnologiyaları sahəsində fundamental biliklərinizi təsdiq edən beynəlxalq sənəddir.</li>
+                <li>Sertifikat gələcəkdə sənaye sertifikatından keçməyə və Cisco Systems - Cisco Associate (CCNA, CCDA) şirkətindən İT əmək bazarında ən prestijli və tələb olunan sertifikatı və gələcəkdə daha yüksək səviyyəli peşəkar sertifikatı almağa kömək edəcək.</li>
+                <li>Şəbəkə Akademiyasının təlim proqramına daxil edilmiş hər bir modulun nəticələrindən sonra onlayn sınaq CCNA statusu üçün sənaye sertifikatlaşdırma imtahanına tam hazırlaşmaq imkanı verir.</li>
+                <li>Sertifikat sizə şəbəkə administratoru və ya şəbəkə mühəndisi-dizayneri kimi işləmək üçün kifayət qədər real, müasir Cisco avadanlığı üzərində işləmək üçün ciddi praktiki təcrübə qazanmaq imkanı verir.</li>
+                <li>CCNA sertifikatı istənilən ölçülü şəbəkə administratorları üçün tövsiyə olunur və əhəmiyyətli məşğulluq üstünlüyüdür. Sertifikat, işəgötürəninizi şəbəkələşmə və şəbəkə idarəetməsi haqqında öyrənməyə ciddi olduğunuza inandırmağa kömək edəcək.</li>
+            </ul>
+            <br>
+            <p>Sertifikatın olması sizə maraqlı və yüksək maaşlı iş seçməkdə mühüm üstünlüklər verir (müasir dünyada şəbəkə texnologiyaları sahəsində mütəxəssislərin kəskin çatışmazlığı var).</p>    
+
+            <h2>Kurs haqqında məlumat</h2>
+            <p>Şəbəkə inzibatçısı - Cisco CCNA R&S həftədə 2 dəfə minimum 2 saat keçirilir. Ayliq ödəniş 260 AZN-dir və 4 ay davam edir. Kursumuz Cisco şirkətinin rəsmi əməkdaşı oldugu üçün tələbələrimizə beynəlxalq imtahana giriş üçün tələb olunan məbləğin(300$) net 61.5%-i dəyərində VAUCHER-ENDİRİM verilir. Və siz beynəlxalq imtahana 300$-əvəzinə 125$ odəniş edəcəksiz. Dərslər REAL AVADANLIQLARDA praktiki tədris olunur.</p>
+        
+            <h2>Server tərəfi(Server Side) nədir?</h2>
+            <p>Back-End proqramlaşdırmada, sayta daxil olan məlumatlar database’a göndərilir. Bu səbəbdən, Back-End dedikdə eyni zamanda MYSQL, MSSQL və Oracle kimi database dilləri ilə iş də, nəzərdə tututlur.</p>
+            <div id="comment">
+                <h1>Mesaj yaz</h1>
+                <form action="">
+                    <div class="comment">
+                        <div class="comment-top">
+                            <input type="text" name="comentNameUser" id="comentNameUser" placeholder="Ad" required>
+                            <input type="email" name="comentEmailUser" id="comentEmailUser" placeholder="Email Ünvan" required>
+                        </div>
+                        <div class="comment-bottom">
+                            <textarea name="message" cols="30" rows="4" placeholder="Mesajınızı qeyd edin" id="comentMessageText"></textarea>
+                        </div>
+                        <button type="submit">Mesajı göndər</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-ccna">
+            <img src="./assets/ccna.jpg" alt="">
+            <img src="./assets/ccna1.jpg" alt="">
+            <img src="./assets/ccna2.png" alt="">
+            <img src="./assets/ccna3.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="reedInfoChooseRhcsa" class="slider-reed-info slider_rhcsa">
+        <div class="left-rhcsa">
+            <h2>Red Hat Certified System Administrator nədir?</h2>
+            <p>RHCSA imtahanı təcrübəsiz Linux/Unix istifadəçilərinə yönəlmiş giriş səviyyəli sertifikatdır. Bu sertifikat əvvəlki RHCT (Red Hat Certified Technician) sertifikatını əvəz edən Red Hat Enterprise Linux-un 6-cı versiyasının buraxılışı ilə təqdim edilmişdir.</p>
+            
+            <h2>Bu kursu oxumaqla nə əldə edəcəm?</h2>
+            <p>RHCSA Linux sistem administratoru kimi karyeranıza başlamaq üçün ən yaxşı yoldur. RHCSA statusu Red Hat Enterprise Linux iş stansiyalarını quraşdırmaq, konfiqurasiya etmək və mövcud şəbəkə mühitinə inteqrasiya etmək üçün bilik və bacarıqlarınız olduğunu göstərir. RHCSA hazırlıq proqramı Linux haqqında əsas anlayış əldə etməyin ən sürətli yoludur. RHCSA imtahanı, RHCE kimi, namizədin əsas sistem quraşdırma və konfiqurasiya bacarıqlarını nümayiş etdirməli olduğu tam praktiki imtahandır.</p>
+            
+            <h2>RHCSA imtahanı necə keçirilir?</h2>
+            <p>İmtahan 2,5 saat çəkir və bu, suallara cavab verməli olduğunuz bir test deyil, bir şeyi konfiqurasiya etmək / düzəltmək lazım olan real əməliyyat sistemi ilə işləməkdir. İmtahan zamanı internetə çıxış yoxdur, ədəbiyyatdan istifadə edə bilməzsiniz, lakin sistemdə olan bütün yardımlardan istifadə edə bilərsiniz, yəni. əmrlər üçün man\info\help-i oxuyun. Bununla belə, əsas əmrlərin sintaksisini \ düymələrini əvvəlcədən xatırlamağı tövsiyə edirəm, çünki imtahanda sənədləri oxumaq üçün kifayət qədər vaxt olmaya bilər. <br> <br> İmtahan bitdikdən sonra, maşınınız yenidən işə salınır və nəticələri toplayan skript işə salınır, sonra nəzərdən keçirmək üçün RedHat-a göndərilir. Nəticə 3 iş günü ərzində poçta gəlir. Nəyi düzgün etdiyinizi və nəyi etmədiyinizi göstərmədən yalnız xalların ümumi sayını bildirirlər. <br> <br> Əhəmiyyətli məqam ondan ibarətdir ki, yoxlamadan əvvəl işlədiyiniz maşın yenidən işə salınır, yəni. bütün sistem parametrləriniz yenidən başladıqdan sonra sağ qalmalıdır. Sistem yüklənmirsə (məsələn, /etc/fstab-da xəta), o zaman hər şeyi düzgün etmisinizsə belə, avtomatik olaraq 0 xal alırsınız. Yaxud yüklənərkən xidmətin avtomatik başlamasını aktiv etməmisinizsə, o, başlamayacaq və bu xidmətlə bağlı bütün tapşırıqlar hesaba alınmayacaq.</p>
+            
+            <h2>Bizim təkliflər</h2>
+            <p>Linux RHCSA təlimləri bu sahədə 20 illik iş təcrubəsi olan Anar Sadıqov tərəfindən keçiriləcək. Təlimin əsas hissəsi praktik əsaslı tapşırıqlar ilə tədris ediləcək. Təlimin sonunda təlbələr 1 aylıq xüsusi İMTAHANA HAZIRLIQ üçün “BootCamp”a cəlb olunacaq. Linux RHCSA sistem administratoru təlimləri həftədə 2 dəfə minimum 2 saat keçirilir. Ayliq ödəniş ENDİRİMLƏ 280 AZN-dir və 3 ay davam edir.</p>
+            <div id="comment">
+                <h1>Mesaj yaz</h1>
+                <form action="">
+                    <div class="comment">
+                        <div class="comment-top">
+                            <input type="text" name="comentNameUser" id="comentNameUser" placeholder="Ad" required>
+                            <input type="email" name="comentEmailUser" id="comentEmailUser" placeholder="Email Ünvan" required>
+                        </div>
+                        <div class="comment-bottom">
+                            <textarea name="commentMessage" cols="30" rows="4" placeholder="Mesajınızı qeyd edin" id="comentMessageText"></textarea>
+                        </div>
+                        <button type="submit">Mesajı göndər</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-rhcsa">
+            <img src="./assets/rhcsa.png" alt="">
+            <img src="./assets/rhcsa2.jpg" alt="">
+            <img src="./assets/rhcsa3.jpg" alt="">
+            <img src="./assets/rhcsa4.png" alt="">
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./App/App.js"></script>
+    <script>
+        document.getElementById("sidebar").onclick = function () {
+            active.classList.toggle("active");
+        };
+        $('.ricoursechoose li').click(
+            function() {
+                var myCourseReedSlider = $(this).data("slider");
+                $('.slider-reed-info').not('.' + myCourseReedSlider).removeClass('show-reed-info');
+                $('#reedInfoChooseHelpdesk').removeClass('activeric')
+                $('#activeReedinfocourse').removeClass('aricclass')
+                $('.' + myCourseReedSlider).addClass('show-reed-info');
+                //$('.' + mySlider).toggleClass('show');
+            }
+        );
+    </script>
+</body>
+</html>

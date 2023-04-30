@@ -11,6 +11,7 @@
 
     <!-- Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="./assets/webLogo.jpg" />
+
 </head>
 <body>
     
@@ -24,13 +25,14 @@
                     <ul>
                         <li><a href="#header">Əsas</a></li>
                         <li><a href="#about">Haqqımızda</a></li>
+                        <li><a href="http://localhost:3001/teachers">Təlimçilər</a></li>
                         <li><a href="#courses">Kurslar</a></li>
                         <li><a href="#contact">Əlaqə</a></li>
                     </ul>
-                    <div class="nav-btn-group">
+                    <!-- <div class="nav-btn-group">
                         <button onclick="logInBtn()" class="login-btn">Login</button>
-                        <!-- <button class="signup-btn">Sign Up</button> -->
-                    </div>
+                        <button class="signup-btn">Sign Up</button>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -48,7 +50,7 @@
                         Texnologiyanın gücünə bizimlə rəhbərlik edin 
                     </div>
                     <div class="header-btn-group">
-                        <button class="header-start-btn">Başla</button>
+                        <button class="header-start-btn"><a href="http://localhost:3001/teachers">Təlimçilər</a></button>
                         <button class="header-video-btn" onclick="alertedVideo()">
                             <div class="play-button">
                                 <img src="./assets/play-button.png" alt="play-button">
@@ -72,9 +74,10 @@
         
         <div id="active"  class="action-menu">
             <ul>
-                <li><a href="#home">Əsas</a></li>
+                <li><a href="#header">Əsas</a></li>
                 <li><a href="#about">Haqqımızda</a></li>
                 <li><a href="#courses">Kurslar</a></li>
+                <li><a href="http://localhost:3001/teachers">Təlimçilər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
             <div class="sidebar-btn-group">
@@ -102,15 +105,15 @@
             </div>
             <div class="form-box login">
                 <h2  id="testbtn">Login</h2>
-                <form action="#">
+                <form action="/" method="POST">
                     <div class="input-box">
                         <span class="icon-ib"><img src="./assets/email.png" alt="input mail icon"></span>
-                        <input type="email" required>
+                        <input name="emailLogin" type="email" required>
                         <label for="">Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon-ib"><img src="./assets/secured-lock.png" alt="input password img"></span>
-                        <input type="password" required>
+                        <input name="passLogin" type="password" required>
                         <label for="">Password</label>
                     </div>
                     <div class="remember-forgot">
@@ -126,20 +129,20 @@
     
             <div class="form-box register">
                 <h2>Registration</h2>
-                <form action="#">
+                <form action="/" method="POST">
                     <div class="input-box">
                         <span class="icon-ib"><img src="./assets/user.png" alt="input mail icon"></span>
-                        <input type="text" required>
+                        <input name="usernameRegister" type="text" required>
                         <label for="">Username</label>
                     </div>
                     <div class="input-box">
                         <span class="icon-ib"><img src="./assets/email.png" alt="input mail icon"></span>
-                        <input type="email" required>
+                        <input name="emailRegister" type="email" required>
                         <label for="">Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon-ib"><img src="./assets/secured-lock.png" alt="input password img"></span>
-                        <input type="password" required>
+                        <input name="passwordRegister" type="password" required>
                         <label for="">Password</label>
                     </div>
                     <div class="remember-forgot">
@@ -158,7 +161,7 @@
     <!-- Playing Video by clicking Button -->
     <div id="pvbcb">
         <video class="clicked-video-btn" autoplay="autoplay" muted controls>
-            <source src="./assets/Futuristic interface _ HUD sound effects.mp4" type="video/mp4">
+            <source src="./assets/na.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div id="close-video" class="close-clicked-vide-btn"></div>
@@ -217,8 +220,8 @@
                 <div class="course-group-box">
 
                     <div class="course-box" id="csharp-d1">
-                        <img class="course-box-img" src="./assets/1.jpg" alt="">
-                        <div class="course-name">C# - WEB Proqramlaşdırm</div>
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
+                        <div class="course-name">C# Proqramlaşdırma</div>
                         <div class="course-price">300₼</div>
                         <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoCsharpD1()">
                             Ətraflı məlumat
@@ -237,12 +240,12 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
                     <div class="course-box" id="ccna-d2">
-                        <img class="course-box-img" src="./assets/ciscocna.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">Şəbəkə inzibatçısı - Cisco CCNA R&S</div>
                         <div class="course-price">260₼</div>
                         <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoCcnaD1()">
@@ -262,12 +265,12 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
                     <div class="course-box" id="hdesk-d3">
-                        <img class="course-box-img" src="./assets/ithelpdesk.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">IT HelpDesk (COMP-TİA A+)</div>
                         <div class="course-price">150₼</div>
                         <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoHelpD1()">
@@ -286,12 +289,12 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
                     <div class="course-box" id="linux-d4">
-                        <img class="course-box-img" src="./assets/linux2.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">Linux RHCSA</div>
                         <div class="course-price">280₼</div>
                         <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoLinuxD1()">
@@ -312,14 +315,14 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
                     <div class="course-box" id="itadmin-d5">
-                        <img class="course-box-img" src="./assets/itrouteadmin.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">İT Route Admin</div>
-                        <div class="course-price">280₼</div>
+                        <div class="course-price">400₼</div>
                         <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoItAdminD1()">
                             Ətraflı məlumat
                             <img id="more-info-course-img-d5" src="./assets/plus.png" alt="more-btn">
@@ -340,27 +343,20 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
                     <div class="course-box" id="fullstack-d6">
-                        <img class="course-box-img" src="./assets/2.jpg" alt="">
-                        <div class="course-name">Full Stack Developer</div>
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
+                        <div class="course-name">Front-End Developer</div>
                         <div class="course-price">180₼</div>
                         <button class="more-info-course-btn" id="micb-d1" onclick="coursInfoFullStackD1()">
                             Ətraflı məlumat
                             <img id="more-info-course-img-d6" src="./assets/plus.png" alt="more-btn">
                         </button>
                         <div id="course-fullstack-d6" class="catext">
-                            İT Route Admin təlimi 7 aylıq xüsusi proqramla tədris edilir. Bu təlim xüsusi proqramla hazırlanmışdır və 4 fərqli təlimi özündə birləşdirir.
-                            1 - Cisco CCNAP - ENCOR -300-450 nömrəli təlimi
-                            2 - İT şəbəkə təhlükəsizliyi -Firewall Fortigate - NSE4
-                            3 - İT şəbəkə təhlükəsizliyi -Firewall Palo Alto - PNCSA
-                            4 - Clout texnologiyalarina giriş - Amazon AWS Practicioner
-                            Təlimlər nəzəri, praktiki və imtahan hazırlığı hissələrindən ibarətdir. 
-                            Dərslər həftədə 2 dəfə ortalama 2 saat olaraq keçilir və 7 ay davam edəcək. 
-                            Təlimin qiyməti aylıq 400 azndir. Əlaqə üçün 055-633-0777
+                            Front-End təlimi 6 aylıq xüsusi proqramla tədris edilir. Kurs yalnız praktiki tapşırıqlara əsaslanır ki, bu da nəticənin yüksək effektinə zəmanət verir. Bu kursun sonunda siz proqramlaşdırmada səlis olacaqsınız və xəyal edə biləcəyiniz istənilən veb saytı qurmağa hazır olacaqsınız. Siz həmçinin istənilən potensial işəgötürənə göstərə biləcəyiniz 7-dən çox veb-saytdan ibarət portfel yaradacaqsınız. Dərslər həftədə 3 dəfə ortalama 2 saat olaraq keçilir və 6 ay davam edəcək.
                         </div>
                         <div class="course-bottom">
                             <div class="course-logo">
@@ -368,7 +364,7 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
@@ -382,8 +378,8 @@
 
                 <div class="mySlides fade">
                     <div class="course-box" id="csharp">
-                        <img class="course-box-img" src="./assets/1.jpg" alt="">
-                        <div class="course-name">C# - WEB Proqramlaşdırma</div>
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
+                        <div class="course-name">C# Proqramlaşdırma</div>
                         <div class="course-price">300₼</div>
                         <button class="more-info-course-btn" id="micb" onclick="coursInfoCsharp()">
                             Ətraflı məlumat
@@ -402,7 +398,7 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
@@ -410,7 +406,7 @@
                 
                 <div class="mySlides fade">
                     <div class="course-box"  id="ccna">
-                        <img class="course-box-img" src="./assets/ciscocna.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">Şəbəkə inzibatçısı - Cisco CCNA R&S</div>
                         <div class="course-price">260₼</div>
                         <button class="more-info-course-btn" id="micb" onclick="coursInfoCcna()">
@@ -430,7 +426,7 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
@@ -438,7 +434,7 @@
                 
                 <div class="mySlides fade">
                     <div class="course-box" id="helpdesk">
-                        <img class="course-box-img" src="./assets/ithelpdesk.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">IT HelpDesk (COMP-TİA A+)</div>
                         <div class="course-price">150₼</div>
                         <button class="more-info-course-btn" id="micb" onclick="coursInfoHelpDesk()">
@@ -457,7 +453,7 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
@@ -465,7 +461,7 @@
 
                 <div class="mySlides fade">
                     <div class="course-box" id="linuxrhcsa">
-                        <img class="course-box-img" src="./assets/linux.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">Linux RHCSA</div>
                         <div class="course-price">280₼</div>
                         <button class="more-info-course-btn" id="micb" onclick="coursInfoLinuxRhcsa()">
@@ -485,7 +481,7 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
@@ -493,7 +489,7 @@
 
                 <div class="mySlides fade">
                     <div class="course-box" id="itadmin">
-                        <img class="course-box-img" src="./assets/itrouteadmin.jpg" alt="">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
                         <div class="course-name">İT Route Admin</div>
                         <div class="course-price">280₼</div>
                         <button class="more-info-course-btn" id="micb" onclick="coursInfoItAdmin()">
@@ -517,12 +513,36 @@
                                 <span class="course-logo-span">NetLine</span>
                             </div>
                             <div class="course-btn">
-                                <button class="course-button">Dərsə yazıl</button>
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                <div class="mySlides fade">
+                    <div class="course-box" id="frontend">
+                        <img class="course-box-img" src="./assets/cisco-course-canva.jpg" alt="">
+                        <div class="course-name">Front-End Developer</div>
+                        <div class="course-price">180₼</div>
+                        <button class="more-info-course-btn" id="micb" onclick="coursInfoFullStack()">
+                            Ətraflı məlumat
+                            <img id="more-info-course-img6" src="./assets/plus.png" alt="more-btn">
+                        </button>
+                        <div id="course-frontend" class="catext">
+                            Front-End təlimi 6 aylıq xüsusi proqramla tədris edilir. Kurs yalnız praktiki tapşırıqlara əsaslanır ki, bu da nəticənin yüksək effektinə zəmanət verir. Bu kursun sonunda siz proqramlaşdırmada səlis olacaqsınız və xəyal edə biləcəyiniz istənilən veb saytı qurmağa hazır olacaqsınız. Siz həmçinin istənilən potensial işəgötürənə göstərə biləcəyiniz 7-dən çox veb-saytdan ibarət portfel yaradacaqsınız. Dərslər həftədə 3 dəfə ortalama 2 saat olaraq keçilir və 6 ay davam edəcək.
+                        </div>
+                        <div class="course-bottom">
+                            <div class="course-logo">
+                                <img class="course-logo-img" src="./assets/NavLogo.png" alt="">
+                                <span class="course-logo-span">NetLine</span>
+                            </div>
+                            <div class="course-btn">
+                                <a href="http://localhost:3001/registration" class="register-button">Dərsə yazıl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
             </div>   
@@ -607,6 +627,30 @@
         </div>
     </section>
 
+    <!-- What is it? -->
+    <section id="helpInChoose">
+        <div class="help-in-choose-content">
+            <div class="help-in-choose-title">
+                İT öyrənmək istəyirsiniz, amma haradan başlayacağınızı bilmirsiniz? 
+            </div>
+            <div class="help-in-choose-subtitle">
+                Sizə kömək etmək üçün komandamız hər bir İT sahəsini məlumatlandıran 
+                bir sıra məqalələr hazırlamışdır.
+            </div>
+            <div class="help-in-choose-text">
+                Məqalələri oxumaq üçün "Gələcək IT sahəmi seçin" düyməsini basın.
+                Burada informasiya texnologiyalarının hər bir sahəsi haqqında ətraflı məlumat tapa bilərsiniz. 
+                Nəzərdən keçirdikdən sonra hansı kursun sizə daha uyğun olduğunu seçə biləcəksiniz.
+            </div>
+            <div class="help-in-choose-link">
+                <a href="http://localhost:3001/Help-Desk">
+                    Gələcək IT sahəmi seçin
+                </a>
+                <img src="./assets/right.png" class="hic-link-img" alt="">
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section id="contact">
         <div class="contact">
@@ -688,7 +732,7 @@
                             <li><a href="#header">Əsas</a></li>
                             <li><a href="#courses">Kurslar</a></li>
                             <li><a href="#contact">Əlaqə</a></li>
-                            <li><a href="#teachers">Müəllimlər</a></li>
+                            <li><a href="http://localhost:3001/teachers">Təlimçilər</a></li>
                         </ul>
                     </div>
                 </div>
@@ -764,7 +808,7 @@
             </div>
         </div>
     </div> -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./App/App.js"></script>
 </body>
 </html>

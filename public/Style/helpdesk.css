@@ -1,0 +1,350 @@
+body{
+    overflow-x: hidden;
+}
+h1{
+    color: #003333;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+}
+.activeric{
+    display: flex !important;
+}
+.aricclass{
+    color: #6666FF !important;
+}
+#comment{
+    position: relative;
+    width: 100%;
+    margin: 120px 0;
+}
+.comment{
+    display: inline-block;
+    width: 80%;
+}
+.comment button{
+    background-color: #6666FF;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    width: 250px;
+    height: 50px;
+    border-radius: 16px;
+    padding: 10px 25px;
+    border: none;
+    margin: 25px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+.comment-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#comentNameUser{
+    width: 400px;
+    height: 40px;
+    margin-right: 25px;
+    border-radius: 16px;
+    padding: 10px;
+    font-family: 'Montserrat';
+    color: #003333;
+    border-color: #6666FF;
+    outline: none;
+}
+#comentEmailUser{
+    width: 400px;
+    height: 40px;
+    border-radius: 16px;
+    padding: 10px;
+    font-family: 'Montserrat';
+    color: #003333;
+    border-color: #6666FF;
+    outline: none;
+}
+.comment-bottom{
+    margin-top: 25px;
+    position: relative;
+}
+textarea{
+    resize: vertical;
+    width: 98%;
+    height: 250px;
+    border-radius: 16px;
+    padding: 10px;
+    font-family: 'Montserrat';
+    color: #003333;
+    border-color: #6666FF;
+    /* border-width: 2px; */
+    outline: none;
+}
+h2{
+    color: #003333;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+p{
+    color: #003333;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    width: 85%;
+}
+
+/* Helpdesk İnfo Reed */
+#reedInfoChooseHelpdesk{
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 8%;
+}
+.left-helpdesk{
+    opacity: 0;
+    animation: ani 0.5s forwards;
+}
+.right-helpdesk{
+    width: 400px;
+}
+.right-helpdesk img{
+    position: relative;
+    left: 0;
+    width: 350px;
+    border-radius: 15px;
+    margin-left: 25px;
+    opacity: 0;
+    animation: ani 1.0s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* It Root Admin */
+#reedInfoChooseItroutadmin{
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 8%;
+}
+.left-itroutadmin{
+    opacity: 0;
+    animation: ani 0.5s forwards;
+}
+.right-itroutadmin{
+    width: 400px;
+}
+.right-itroutadmin img{
+    position: relative;
+    left: 0;
+    width: 350px;
+    border-radius: 15px;
+    margin-left: 25px;
+    opacity: 0;
+    animation: ani 1.0s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Csharp */
+#reedInfoChooseCsharp{
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 8%;
+}
+.left-csharp{
+    opacity: 0;
+    animation: ani 0.5s forwards;
+}
+.right-csharp{
+    width: 400px;
+}
+.right-csharp img{
+    position: relative;
+    left: 0;
+    width: 350px;
+    border-radius: 15px;
+    margin-left: 25px;
+    opacity: 0;
+    animation: ani 1.0s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Cisco Ccna */
+#reedInfoChooseCcna{
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 8%;
+}
+.left-ccna{
+    opacity: 0;
+    animation: ani 0.5s forwards;
+}
+.left-ccna ul li{
+    color: #003333;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    width: 85%;
+}
+.right-ccna{
+    width: 400px;
+}
+.right-ccna img{
+    position: relative;
+    left: 0;
+    width: 350px;
+    border-radius: 15px;
+    margin-left: 25px;
+    opacity: 0;
+    animation: ani 1.0s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Rhcsa */
+#reedInfoChooseRhcsa{
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 8%;
+}
+.left-rhcsa{
+    opacity: 0;
+    animation: ani 0.5s forwards;
+}
+.right-rhcsa{
+    width: 400px;
+}
+.right-rhcsa img{
+    position: relative;
+    left: 0;
+    width: 350px;
+    border-radius: 15px;
+    margin-left: 25px;
+    opacity: 0;
+    animation: ani 1.0s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Button Group Reed Info */
+#reedInfo{
+    background-color: #EDEEF3;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    padding: 10px 0;
+}
+.reed-info-choose-title{
+    margin-top: 8%;
+}
+.ricoursechoose{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 0 8%;
+    padding-left: 0;
+}
+.ricoursechoose li{
+    list-style: none;
+    margin: 10px;
+}
+.ricoursechoose li a{
+    text-decoration: none;
+    color: #003333;
+    font-family: 'Montserrat';
+    position: relative;
+    font-weight: 500;
+}
+.ricoursechoose li a:hover{
+    color: #6666FF;
+}
+.ricoursechoose li a:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+    bottom: -8px;
+	height: 3px;
+	background-color: #6666FF;
+	content: "";
+	transition: width 0.2s ease-out; 
+}
+.ricoursechoose li a:hover:after,
+.ricoursechoose li a:focus:after {
+	width: 100%;
+}
+
+/* Reed Info Activate */
+.slider-reed-info {
+    display:none;
+}
+.show-reed-info {
+    display: flex;
+}
+
+
+/* Mobile Version */
+@media (max-width:1500px){
+    .right-itroutadmin, .right-csharp, .right-ccna, .right-helpdesk, .right-rhcsa img{
+        width: 300px;
+    }
+}
+@media (max-width:1400px){
+    /* .reedInfoChooseHelpdesk{
+        display: block;
+        width: 100%;
+    } */
+    .left-helpdesk, .left-itroutadmin, .left-csharp, .left-ccna, .left-rhcsa{
+        width: 100%;
+    }
+    .right-itroutadmin, .right-csharp, .right-ccna, .right-helpdesk, .right-rhcsa img{
+        display: none;
+    }
+    p{
+        width: 100%;
+    }
+}
+@media (max-width:1000px){
+    #reedInfo{
+        margin-top: 10%;
+    }
+}
+@media (max-width:750px){
+    #reedInfo{
+        margin-top: 16%;
+    }
+}
+@media (max-width:500px){
+    p{
+        font-size: 14px;
+    }
+    #helpdesk{
+        padding-top: 25%;
+    }
+    .comment-top{
+        display: block;
+    }
+    #comentNameUser{
+        width: 308px;
+        margin: 0 0  15px 0;
+    }
+    #comentEmailUser{
+        width: 308px;
+    }
+    textarea{
+        width: 308px;
+    }
+    .comment{
+        width: 100%;
+    }
+    #reedInfo{
+        margin-top: 20%;
+    }
+}

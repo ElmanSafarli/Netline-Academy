@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslara Yazıl</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/webLogo.jpg" />
+    <link rel="stylesheet" href="../Style/registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+</head>
+<body>
+    <div class="registration">
+        <div class="registration-content">
+           
+                <div id="info">
+                    <img src="../assets/NavLogo.png" alt="logo-register">
+                    Onlar işləmədən yaşamağa imkan verəcək maşınlar yaratmaq yerinə, yaşamaq üçün işləyirlər.
+                </div>
+                <form id="app-cover" action="/registration" method="POST">
+                    <select id="courseList" name="coursename">
+                        <option class="drop-list" value="C# - WEB Proqramlaşdırma">C# - WEB Proqramlaşdırma</option>
+                        <option class="drop-list" value="Şəbəkə inzibatçısı - Cisco CCNA">Şəbəkə inzibatçısı - Cisco CCNA</option>
+                        <option class="drop-list" value="IT HelpDesk">IT HelpDesk</option>
+                        <option class="drop-list" value="Linux RHCSA">Linux RHCSA</option>
+                        <option class="drop-list" value="İT Route Admin">İT Route Admin</option>
+                        <option class="drop-list" value="Network Security">Network Security</option>
+                        <option class="drop-list" value="Front End Developer">Front End Development</option>
+                        <option class="drop-list" value="C++ Proqramlaşdırma">C++ Proqramlaşdırma</option>
+                        <option class="drop-list" value="Python Proqramlaşdırma">Python Proqramlaşdırma</option>
+                    </select>
+                    <div id="qeydiyyatAd">
+                        <input id="qeydiyyat-ad-daxil" type="text" placeholder="Ad" name="musteriAdı" required>
+                        <span>Adınızı daxil edin</span>
+                    </div>
+                    <div id="qeydiyyatSoyad">
+                        <input id="qeydiyyat-soyad-daxil" type="text" placeholder="Soyad" name="musteriSoyad" required>
+                        <span>Soyadınızı daxil edin</span>
+                    </div>
+                    <h3>Qeri dönüş üçün əlaqə nömrəsi qeyd edin</h3>
+                    <div id="qeydiyyatNomre">
+                        <input id="qeydiyyat-nomre-daxil" type="tel" name="musteriNomre" placeholder="+994 (070) 000 00 00" required>
+                    </div>
+                    <button class="button-submit" type="submit">Mənə qeri dönüş edin</button>
+                </form> 
+        </div>
+    </div>
+
+
+    <script>
+        $("#qeydiyyat-nomre-daxil").mask("  +999 (999) 999 99 99",{placeholder:" "});
+    </script>
+
+</body>
+</html>
